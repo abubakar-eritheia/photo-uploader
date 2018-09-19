@@ -2,7 +2,7 @@
 	<h1 class="text-uppercase">Claim photo capture</h1>
 </header>
 <div class="text-holder clearfix">
-	<strong class="heading text-center text-uppercase">Replace with any nice</strong>
+	<strong class="heading text-center text-uppercase">Replace with anything nice</strong>
 	<p>A fast and easy way to capture your claim photo and documents!</p>
 </div>
 <div class="capture-box clearfix">
@@ -11,6 +11,9 @@
 	<h2>Photo upload/capture</h2>
 		<%= form_for @image, html: { multipart: true } do |form| %>
       <div class="frame">
+        <div class="image-holder d-none">
+          <div class="row"></div>
+        </div>
         <div class="row">
           <div class="col-sm-6">
             <label>Additional photo/docs</label>
@@ -24,11 +27,11 @@
         </div>
       </div>
       <div class="form-check form-group">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">I agree to the <a href="#">Terms & Conditions</a></label>
+        <input type="checkbox" class="form-check-input" id="check-box">
+        <label class="form-check-label" for="exampleCheck1">I agree to the <a href="javascript:void(0)">Terms & Conditions</a></label>
       </div>
       <div class="text-center">
-        <%= form.submit "Send" %>
+        <%= form.submit "Send", class: 'btn disabled', id: 'submit_button', disabled: 'disabled' %>
       </div>
     <% end %>
 </div>

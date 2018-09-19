@@ -50,6 +50,20 @@
 	}
 }
 
+.custom-height {
+	height: 180px;
+	margin: 0 0 20px;
+	overflow: hidden;
+
+	.img-box {
+		img {
+			width: 100%;
+			display: block;
+			height: 180px;
+		}
+	}
+}
+
 .capture-box {
 	padding: 15px;
 
@@ -78,7 +92,15 @@
 			display: block;
 			font-size: 14px;
 			line-height: 16px;
-			margin: 0;
+			margin-bottom: 5px;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+			width: 150px;
+		}
+
+		.form-check-label {
+			width: auto;
 		}
 
 		input[type="checkbox"] {
@@ -101,6 +123,7 @@
 			font-weight: normal;
 			min-width: 200px;
 			text-transform: uppercase;
+			cursor: pointer;
 		}
 
 		.box {
@@ -173,5 +196,11 @@
 				color: #f49ca1;
 			}
 		}
+	}
+}
+
+@media only screen and (max-width: 575px) { 
+	.custom-height {
+		height: auto;
 	}
 }
